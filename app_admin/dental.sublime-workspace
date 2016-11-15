@@ -1,0 +1,363 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"req",
+				"require"
+			],
+			[
+				"err",
+				"err_query"
+			],
+			[
+				"con",
+				"connection"
+			],
+			[
+				"file",
+				"fieles"
+			],
+			[
+				"us",
+				"use"
+			],
+			[
+				"re",
+				"respond"
+			],
+			[
+				"res",
+				"respond"
+			],
+			[
+				"requ",
+				"resquest"
+			],
+			[
+				"g",
+				"guestbook"
+			],
+			[
+				"br",
+				"brand"
+			],
+			[
+				"mo",
+				"model"
+			],
+			[
+				"sma",
+				"smartphone_list"
+			],
+			[
+				"send",
+				"sendfile"
+			],
+			[
+				"ru",
+				"require"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"mysql_fetch_a",
+				"mysql_fetch_assoc"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/linux/Desktop/esn/esn_20-1-59/esn2/application/models/date.php",
+			"settings":
+			{
+				"buffer_size": 3175,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 196.0,
+		"selected_items":
+		[
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/linux/Desktop/esn/esn_20-1-59/esn2/application/controllers/adr.php",
+		"/C/Users/linux/Desktop/jnode/mysql3/repository/users.js",
+		"/C/Users/linux/Desktop/jnode/mysql3/app.js",
+		"/C/Users/linux/Desktop/jnode/mysql3/routes/users.js",
+		"/C/Users/linux/Desktop/jnode/mysql3/package.json",
+		"/C/Users/linux/Desktop/jnode/mysql2/app.js",
+		"/C/Users/linux/Desktop/jnode/mysql2/repository/users.js",
+		"/C/Users/linux/Desktop/jnode/mysql2/routes/mysql.js",
+		"/C/Users/linux/Desktop/jnode/mysql2/package.json",
+		"/C/Users/linux/Desktop/jnode/test1/lib/mysql.js",
+		"/C/Users/linux/Desktop/jnode/mysql/repository/user.js",
+		"/C/Users/linux/Desktop/jnode/mysql/app.js",
+		"/C/Users/linux/Desktop/jnode/test1/app.js",
+		"/C/Users/linux/Desktop/jnode/mysql/routes/users.js",
+		"/C/Users/linux/Desktop/jnode/test1/routes/mysql.js",
+		"/C/Users/linux/Desktop/jnode/socket1/package.json",
+		"/C/Users/linux/Desktop/jnode/mysql/package.json",
+		"/C/Users/linux/Desktop/jnode/test1/package.json",
+		"/C/Users/linux/Desktop/jnode/test1/routes/users.js",
+		"/C/xampp/htdocs/testyii/protected/controllers/SiteController.php",
+		"/C/xampp/htdocs/testyii/protected/views/site/say.php",
+		"/C/xampp/htdocs/testyii/protected/views/site/index.php",
+		"/C/xampp/htdocs/testyii/protected/views/site/contact.php",
+		"/C/xampp/php/composer.json",
+		"/C/laravel1/lob01/public/web.config",
+		"/C/xampp/htdocs/testyii/protected/config/test.php",
+		"/C/xampp/htdocs/testyii/protected/config/main.php",
+		"/C/xampp/htdocs/testyii/protected/config/database.php",
+		"/C/Users/linux/Desktop/yii-1.1.17.467ff50/README",
+		"/C/Users/linux/AppData/Roaming/Composer/composer.json",
+		"/C/xampp/php/php.ini",
+		"/C/xampp/php/composer.phar",
+		"/C/laravel1/lob01/app/Http/routes.php",
+		"/C/laravel1/lob01/config/database.php",
+		"/C/laravel1/lob01/resources/views/b1.php",
+		"/C/laravel1/lob01/resources/views/test1.php",
+		"/C/laravel1/lob01/resources/views/tasks.blade.php",
+		"/C/laravel1/lob01/resources/views/home.php",
+		"/C/YII/basic/config/web.php",
+		"/C/YII/basic/yii",
+		"/C/xampp/htdocs/dental/application/controllers/welcome.php",
+		"/C/xampp/htdocs/dental/dental.sublime-project",
+		"/C/xampp/htdocs/dental/application/views/home.php",
+		"/C/vagrant/Vagrantfile",
+		"/C/Users/linux/Desktop/vagrant/Vagrantfile",
+		"/C/Users/linux/Desktop/jnode/jade/views/user.jade",
+		"/C/Users/linux/Desktop/jnode/jade/routes/users.js",
+		"/C/Users/linux/Desktop/jnode/jade/views/index.jade",
+		"/C/Users/linux/Desktop/jnode/jade/routes/index.js",
+		"/C/Users/linux/Desktop/jnode/jade/views/layout.jade",
+		"/C/Users/linux/Desktop/jnode/moduljs/app.js",
+		"/C/Users/linux/Desktop/jnode/moduljs/package.json",
+		"/C/Users/linux/Desktop/jnode/moduljs/routes/users.js",
+		"/C/Users/linux/Desktop/jnode/moduljs/library/demo.js",
+		"/C/Users/linux/Desktop/jnode/lab04/public/html/uploadhtml.html",
+		"/C/Users/linux/Desktop/jnode/lab04/app.js",
+		"/C/Users/linux/Desktop/jnode/lab04/routes/upload.js",
+		"/C/Users/linux/Desktop/jnode/lab03/routes/guestbook.js",
+		"/C/Users/linux/Desktop/jnode/lab03/app.js",
+		"/C/Users/linux/Desktop/jnode/lab03/package.json",
+		"/C/Users/linux/Desktop/jnode/lab03/public/html/guestbook.html",
+		"/C/Users/linux/Desktop/jnode/lab02/public/html/smartphone_list.html",
+		"/C/Users/linux/Desktop/jnode/lab02/routes/smartphone.js",
+		"/C/Users/linux/Desktop/jnode/lab02/package.json",
+		"/C/Users/linux/Desktop/jnode/lab02/app.js",
+		"/C/Users/linux/Desktop/jnode/lab02/bin/www",
+		"/C/Users/linux/AppData/Local/Temp/Rar$DRa0.832/tree2_getdata.php",
+		"/C/Users/linux/Desktop/jnode/lab02/routes/product.js",
+		"/C/Users/linux/Desktop/jnode/lab02/routes/index.js",
+		"/C/Users/linux/Desktop/jnode/lab02/views/index.jade",
+		"/C/Users/linux/Desktop/jnode/lab02/routes/users.js",
+		"/C/xampp/htdocs/donate/easy/demo/accordion/ajax.html",
+		"/C/xampp/htdocs/j/demo/menu/inline.html",
+		"/C/Users/linux/Desktop/easyui-datagrid2-demo/datagrid2_getdata.php",
+		"/E/vagrant/Vagrantfile",
+		"/E/vargrant_getting_started/Vagrantfile",
+		"/C/Users/linux/Desktop/sakon/serviceSakon/ServerSide.php",
+		"/C/Users/linux/Desktop/sakon/serviceSakon/ClientSide.php",
+		"/C/Users/linux/Desktop/esn_server_DB_backup/esn2/application/config/database.php",
+		"/C/Users/linux/Desktop/esn_server_DB_backup/esn2/application/config/config.php",
+		"/C/Users/linux/Desktop/สสจ/serviceSakon/ServerSide.php",
+		"/C/xampp/htdocs/mobile/page1.php",
+		"/C/xampp/htdocs/json2/getJSON2_.php",
+		"/C/xampp/htdocs/json2/autocomp_patient.php",
+		"/C/xampp/htdocs/mobile/configDB.php",
+		"/C/xampp/htdocs/json2/configMYSQL.php",
+		"/C/xampp/htdocs/json2/insertWeight.php",
+		"/C/Users/linux/Desktop/tb_patient2.sql",
+		"/C/xampp/htdocs/json2/configDB.php",
+		"/C/xampp/htdocs/json2/checkLogin_.php",
+		"/C/xampp/htdocs/dental/application/config/database.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"firstName",
+			"820",
+			"url"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/linux/Desktop/esn/esn_20-1-59/esn2/application/models/date.php",
+					"settings":
+					{
+						"buffer_size": 3175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								244,
+								229
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.880530973451,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

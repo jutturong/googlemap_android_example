@@ -1,0 +1,57 @@
+ศิรวุฒิ 	อยู่ภักดี  
+
+$('#doctor_fr4').textbox('setValue',k.doctor);
+                                                         $('#date_fr4').datetimebox('setValue',k.begin_date);
+                                                          $('#date2_fr4').datetimebox('setValue',k.end_date);
+                                                          var  goslon=k.goslon;
+                                                          //alert(goslon);
+                                                           $('#goslon').combobox('setValue',goslon);
+                                                           var 	incisor=k.incisor;
+                                                           
+                                                           var   incisor=2;
+                                                           // alert(incisor);  
+                                                           //incisor1
+                                                                 if(  incisor == 1 )
+                                                                 {
+                                                                     $('#incisor1').attr('checked',true);
+                                                                 }
+                                                                 else if(   incisor == 2 )
+                                                                 {
+                                                                      $('#incisor2').attr('checked',true);
+                                                                 }
+                                                                  else if(   incisor  == 3)
+                                                                 {
+                                                                      $('#incisor3').attr('checked',true);
+                                                                 }
+                                                                  else if(  incisor  == 4)
+                                                                 {
+                                                                       $('#incisor4').attr('checked',true);
+                                                                 }
+                                                                 
+                                                                 var  skeletal=k.skeleta;
+                                                                 //alert( skeletal );
+                                                                 //  skeletal1
+                                                                 if(  skeletal == 1  )
+                                                                 {
+                                                                     $('#skeletal1').attr('checked',true);
+                                                                 }
+                                                                 else if( skeletal == 2 ) 
+                                                                 {
+                                                                     $('#skeletal2').attr('checked',true);
+                                                                 }
+                                                                 else if( skeletal == 3 ) 
+                                                                 {
+                                                                     $('#skeletal3').attr('checked',true);
+                                                                 }
+                                                                 
+                                                               var  dentalcast=k.dentalcast;
+                                                              // alert(dentalcast);
+                                                               if(  dentalcast == 1 )
+                                                               {
+                                                                     $('#dental_cast_yes').attr('checked',true);
+                                                               }
+                                                              else  if(  dentalcast == 2 )
+                                                               {
+                                                                     $('#dental_cast_no').attr('checked',true);
+                                                               }
+                                                            

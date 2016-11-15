@@ -1,0 +1,13 @@
+ 
+
+1.
+  url:'<?=base_url()?>index.php/welcome/json_fr1/' +    $('#id_history_patient').textbox('getValue')  ,
+
+ $tb="tb_psot";  
+
+/*
+   dia_treat3
+*/
+
+4.   $tbj1="tb_history_patient";
+
