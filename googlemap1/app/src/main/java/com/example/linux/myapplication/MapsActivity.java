@@ -1,7 +1,13 @@
 package com.example.linux.myapplication;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.location.LocationManager;
+import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.RadioButton;
 
@@ -65,6 +71,45 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //*** RadioButton
         rdoNormal = (RadioButton)findViewById(R.id.rdoNormal);
 
+        String toolTip = String.format("Your Location Lat=%s, Lon=%s", Latitude,Longitude);
+        MarkerOptions marker = new MarkerOptions().position(new LatLng(Latitude, Longitude)).title(toolTip);
+        googleMap.addMarker(marker);
+
+
+        //---------Check Enabled Location Services  เป็นการ check การเปิด location server GPS-------
+        final AlertDialog.Builder adb = new AlertDialog.Builder(this);
+        LocationManager lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+        boolean isGPS_Enabled = false;
+        boolean isNetwork_Enabled = false;
+
+        try {
+            isGPS_Enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        } catch (Exception ex) { }
+
+        try {
+            isNetwork_Enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        } catch (Exception ex) { }
+
+        if (!isGPS_Enabled && !isNetwork_Enabled) {
+
+            adb.setTitle("Warning Location Services!!");
+            adb.setMessage("Please Enable Location Services.");
+            adb.setNegativeButton("Cancel", null);
+            adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
+                public void onClick(DialogInterface dialog, int arg1) {
+                    // TODO Auto-generated method stub
+                    Intent myIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivity(myIntent);
+                }
+            });
+            adb.show();
+
+        }
+
+
+
+
+
 
     }
 
@@ -83,6 +128,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
     };
+
+
+
+
 
 
 }
