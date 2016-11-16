@@ -3,20 +3,31 @@ package com.example.linux.myapplication;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.location.Geocoder;
 import android.location.LocationManager;
+import android.os.AsyncTask;
 import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
+import com.google.android.gms.identity.intents.Address;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -30,6 +41,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     // RadioButton
     RadioButton rdoNormal, rdoHybrid, rdoSatellite, rdoTerrain;
 
+   // ArrayList<HashMap<String, String>> location = new ArrayList<HashMap<String, String>>();
+   // HashMap<String, String> map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,7 +124,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
+
+
+
     }
+
+
 
 
     RadioButton.OnClickListener myOptionOnClickListener = new RadioButton.OnClickListener()
@@ -123,11 +141,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             if(rdoNormal.isChecked())
             {
                 mMap.setMapType(com.google.android.gms.maps.GoogleMap.MAP_TYPE_NORMAL);
+            }else if(rdoHybrid.isChecked())
+            {
+                mMap.setMapType(com.google.android.gms.maps.GoogleMap.MAP_TYPE_HYBRID);
+            }else if(rdoSatellite.isChecked())
+            {
+                mMap.setMapType(com.google.android.gms.maps.GoogleMap.MAP_TYPE_SATELLITE);
+            }else if(rdoTerrain.isChecked())
+            {
+                mMap.setMapType(com.google.android.gms.maps.GoogleMap.MAP_TYPE_TERRAIN);
             }
 
 
         }
     };
+
+
+
+
+
 
 
 
