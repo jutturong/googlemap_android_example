@@ -55,11 +55,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Double Longitude  = 102.8381056;
 
 
+//@16.1991207, 103.2818035
+    private Double Latitude2  = 16.1991207;
+    private Double Longitude2  = 103.2818035;
 
-    //@16.7399587,101.5715252
-//16.5055501,102.867364
-    private Double Latitude2  = 16.5055501;
-    private Double Longitude2  = 102.867364;
+
+    //@15.9395477,103.5304926
+    private Double Latitude3  = 15.9395477;
+    private Double Longitude3  = 103.5304926;
+
+
+//กาฬสินธุ์/@16.6427287,103.3881626,
+    private Double Latitude4  = 16.6427287;
+    private Double Longitude4  = 103.3881626;
+
+
+    //@16.1876986,102.8692588
+    private Double Latitude5  = 16.1876986;
+    private Double Longitude5  = 102.8692588;
+
+    ///@15.9884487,103.9252753
+    private Double Latitude6  = 15.9884487;
+    private Double Longitude6  = 103.9252753;
 
 
     // RadioButton
@@ -101,13 +118,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Marker TP = googleMap.addMarker(new MarkerOptions()
                 .position(sydney).title("แสดงตำแหน่งการปักหมุด"));
 
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in 1"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
 
-        MarkerOptions marker = new MarkerOptions().position(new LatLng(Latitude2, Longitude2)).title("Hello Maps2 ");
+        MarkerOptions marker = new MarkerOptions().position(new LatLng(Latitude2, Longitude2)).title("Marker in 2");
         mMap.addMarker(marker);
         marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
+
+
+        MarkerOptions marker3 = new MarkerOptions().position(new LatLng(Latitude3, Longitude3)).title("Marker in 3");
+        mMap.addMarker(marker3);
+        marker3.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
+
+
+        MarkerOptions marker4 = new MarkerOptions().position(new LatLng(Latitude4, Longitude4)).title("Marker in 4");
+        mMap.addMarker(marker4);
+        marker4.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
+
+
+        MarkerOptions marker5 = new MarkerOptions().position(new LatLng(Latitude5, Longitude5)).title("Marker in 5");
+        mMap.addMarker(marker5);
+        marker5.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
+
+
+        MarkerOptions marker6 = new MarkerOptions().position(new LatLng(Latitude6, Longitude6)).title("Marker in 6");
+        mMap.addMarker(marker6);
+        marker6.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
+
+
 
 
         mMap.getUiSettings().setZoomGesturesEnabled(true);
@@ -122,14 +161,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //*** Focus & Zoom
         mMap.setMapType(com.google.android.gms.maps.GoogleMap.MAP_TYPE_HYBRID);
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom( sydney  , 17));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom( sydney  , 8 ));
 
 
          //Channing Map Type
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+       // mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
       //  mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-      //  mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
 
         mMap.getUiSettings().setZoomGesturesEnabled(true);
 
