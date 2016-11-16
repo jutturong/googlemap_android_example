@@ -10,6 +10,7 @@ import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -21,9 +22,24 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,8 +50,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
 
     // Latitude & Longitude
-    private Double Latitude  = 16.4610081;
-    private Double Longitude  = 102.8342285;
+//@16.461336,102.8381056
+    private Double Latitude  = 16.461336;
+    private Double Longitude  = 102.8381056;
+
+
+
+    //@16.7399587,101.5715252
+//16.5055501,102.867364
+    private Double Latitude2  = 16.5055501;
+    private Double Longitude2  = 102.867364;
 
 
     // RadioButton
@@ -43,6 +67,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
    // ArrayList<HashMap<String, String>> location = new ArrayList<HashMap<String, String>>();
    // HashMap<String, String> map;
+
+    //http://kkucleft.kku.ac.th/app_admin/index.php/welcome/json_location
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,12 +97,53 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng( Latitude , Longitude );
+
+        Marker TP = googleMap.addMarker(new MarkerOptions()
+                .position(sydney).title("แสดงตำแหน่งการปักหมุด"));
+
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+
+        MarkerOptions marker = new MarkerOptions().position(new LatLng(Latitude2, Longitude2)).title("Hello Maps2 ");
+        mMap.addMarker(marker);
+        marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
+
+
+        mMap.getUiSettings().setZoomGesturesEnabled(true);
+
+        /*
+        final LatLng TutorialsPoint = new LatLng(21 , 57);
+        Marker TP = googleMap.addMarker(new MarkerOptions()
+                .position(TutorialsPoint).title("TutorialsPoint"));
+         */
+
+
 
         //*** Focus & Zoom
         mMap.setMapType(com.google.android.gms.maps.GoogleMap.MAP_TYPE_HYBRID);
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom( sydney  , 17));
+
+
+         //Channing Map Type
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+      //  mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+      //  mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+
+        mMap.getUiSettings().setZoomGesturesEnabled(true);
+
+       // mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
+
+        mMap.getUiSettings().setRotateGesturesEnabled(true);
+        //Compass Functionality
+        mMap.getUiSettings().setCompassEnabled(true);
+        //My Location Button
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+
+        mMap.getUiSettings().setRotateGesturesEnabled(true);
+
+
 
         //*** Zoom Control
         mMap.getUiSettings().setRotateGesturesEnabled(true);
@@ -84,9 +151,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //*** RadioButton
         rdoNormal = (RadioButton)findViewById(R.id.rdoNormal);
 
-        String toolTip = String.format("Your Location Lat=%s, Lon=%s", Latitude,Longitude);
-        MarkerOptions marker = new MarkerOptions().position(new LatLng(Latitude, Longitude)).title(toolTip);
-        googleMap.addMarker(marker);
+
+
+
+
 
 
         //---------Check Enabled Location Services  เป็นการ check การเปิด location server GPS-------
@@ -120,9 +188,47 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
 
+/*
+
+        ArrayList<HashMap<String, String>> location = null;
+        String url = "http://kkucleft.kku.ac.th/app_admin/index.php/welcome/json_location";
+        try {
+
+            JSONArray data = new JSONArray(getHttpGet(url));
+
+            location = new ArrayList<HashMap<String, String>>();
+            HashMap<String, String> map;
+
+            Toast.makeText(MapsActivity.this,String.valueOf(  data.length()  ),Toast.LENGTH_SHORT).show();
 
 
 
+            for(int i = 0; i < data.length(); i++){
+                JSONObject c = data.getJSONObject(i);
+
+                map = new HashMap<String, String>();
+                map.put("LocationID", c.getString("LocationID"));
+                map.put("Latitude", c.getString("Latitude"));
+                map.put("Longitude", c.getString("Longitude"));
+                map.put("LocationName", c.getString("LocationName"));
+                location.add(map);
+
+                Toast.makeText(MapsActivity.this,String.valueOf( c.getString("LocationName") ),Toast.LENGTH_SHORT).show();
+
+            }
+
+
+
+
+
+
+
+        } catch (JSONException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+*/
 
 
 
@@ -158,7 +264,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-
+    public static String getHttpGet(String url) {
+        StringBuilder str = new StringBuilder();
+        HttpClient client = new DefaultHttpClient();
+        HttpGet httpGet = new HttpGet(url);
+        try {
+            HttpResponse response = client.execute(httpGet);
+            StatusLine statusLine = response.getStatusLine();
+            int statusCode = statusLine.getStatusCode();
+            if (statusCode == 200) { // Download OK
+                HttpEntity entity = response.getEntity();
+                InputStream content = entity.getContent();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    str.append(line);
+                }
+            } else {
+                Log.e("Log", "Failed to download result..");
+            }
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return str.toString();
+    }
 
 
 
