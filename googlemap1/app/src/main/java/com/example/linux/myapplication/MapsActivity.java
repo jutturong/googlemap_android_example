@@ -3,6 +3,7 @@ package com.example.linux.myapplication;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.location.Geocoder;
 import android.location.LocationManager;
 import android.os.AsyncTask;
@@ -16,14 +17,19 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.google.android.gms.identity.intents.Address;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polygon;
+import com.google.android.gms.maps.model.PolygonOptions;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -127,9 +133,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
 
 
+        //https://www.tutorialspoint.com/android/android_google_maps.htm
+
+        Circle circle = mMap.addCircle(new CircleOptions()
+                .center(new LatLng(Latitude2, Longitude2 ))
+                .radius(3000)
+                .strokeColor(Color.RED)
+                .fillColor(Color.BLUE));
+
+
+
+       // animateCamera(CameraUpdate update)
+
+
+
+
+
+
+
         MarkerOptions marker3 = new MarkerOptions().position(new LatLng(Latitude3, Longitude3)).title("Marker in 3");
         mMap.addMarker(marker3);
         marker3.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
+
+
 
 
         MarkerOptions marker4 = new MarkerOptions().position(new LatLng(Latitude4, Longitude4)).title("Marker in 4");
